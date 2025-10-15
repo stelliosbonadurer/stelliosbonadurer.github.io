@@ -277,6 +277,42 @@
 			opacity: 0.75;
 		}
 
+		/* Simple projects list */
+		#header .projects {
+			margin: 1.25em auto 0;
+			max-width: 40rem;
+			text-align: left;
+		}
+
+		#header .projects ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#header .projects li + li {
+			margin-top: 0.9em;
+			padding-top: 0.9em;
+			border-top: 1px solid rgba(255,255,255,0.2);
+		}
+
+		#header .projects h3 {
+			margin: 0 0 0.2em 0;
+			font-size: 1.15em;
+			font-weight: 700;
+		}
+
+		#header .projects h3 a {
+			border-bottom: 1px dotted rgba(255,255,255,0.6);
+		}
+
+		#header .projects p {
+			margin: 0;
+			font-size: 0.95em;
+			opacity: 0.85;
+			line-height: 1.5em;
+		}
+
 		#header nav.icon-links {
 			margin: 1.5em 0 0 0;
 		}
