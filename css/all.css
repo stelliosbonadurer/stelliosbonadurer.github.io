@@ -318,23 +318,31 @@ h2.slogan{
 	margin: 0 0 27px;
 }
 .progress li span{
-	background: #50af6f;
-	color: #fff;
-	text-transform:uppercase;
+	/* Remove progress-fill visual; spans will be used for icons */
 	display: block;
-	font-family: 'novecentosanswide';
-	font-weight: normal;
-	font-size: 18px;
-	padding: 0 0 0 20px;
+	text-indent: -9999px; /* hide any accidental text content */
 }
-.progress li span.photoshop{width: 100%;}
-.progress li span.illustrator{width: 70%;}
-.progress li span.indesign{width: 40%;}
-.progress li span.flash{width: 80%;}
-.progress li span.html{width: 75%;}
-.progress li span.wordpress{width: 85%;}
-.progress li span.jquery{width: 70%;}
-.progress li span.seo{width: 40%;}
+
+/* Base icon style used for skills */
+.progress li span.skill-icon{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 48px 48px; /* adjust icon size as needed */
+	text-indent: -9999px;
+}
+
+/* per-skill icons (use existing icon files where available) */
+.progress li span.java{ background-image: url(../images/icon_ps.png); }
+.progress li span.python{ background-image: url(../images/icon_ai.png); }
+.progress li span.csharp{ background-image: url(../images/icon_ld.png); }
+.progress li span.raspberry-pi{ background-image: url(../images/icon_fl.png); }
+.progress li span.html{ background-image: url(../images/icon_html.png); }
+.progress li span.wordpress{ background-image: url(../images/icon_wp.png); }
+.progress li span.jquery{ background-image: url(../images/icon_jq.png); }
+.progress li span.seo{ background-image: url(../images/icon_seo.png); }
 .plagin_list{
 	width: 100%;
 	overflow: hidden;
@@ -701,6 +709,16 @@ transition: all 0.5s ease-in-out;
 		background-image: url(../images/icon_seo@x2.png);
 		background-size:60px 24px;
 	}
+
+	/* retina versions for skill icons */
+	.progress li span.java{ background-image: url(../images/icon_ps@x2.png); background-size:48px 48px; }
+	.progress li span.python{ background-image: url(../images/icon_ai@x2.png); background-size:48px 48px; }
+	.progress li span.csharp{ background-image: url(../images/icon_ld@x2.png); background-size:48px 48px; }
+	.progress li span.raspberry-pi{ background-image: url(../images/icon_fl@x2.png); background-size:48px 48px; }
+	.progress li span.html{ background-image: url(../images/icon_html@x2.png); background-size:48px 48px; }
+	.progress li span.wordpress{ background-image: url(../images/icon_wp@x2.png); background-size:48px 48px; }
+	.progress li span.jquery{ background-image: url(../images/icon_jq@x2.png); background-size:48px 48px; }
+	.progress li span.seo{ background-image: url(../images/icon_seo@x2.png); background-size:48px 48px; }
 	.box_contact span.email{
 		background-image: url(../images/icon_email2@x2.png);
 		background-size:54px 41px;
