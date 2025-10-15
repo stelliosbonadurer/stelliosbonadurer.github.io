@@ -19,9 +19,14 @@
 
 	// Events (JS).
 		
-		// Remove "loading" class once the page has fully loaded.
+		// Remove only the "loading" class once the page has fully loaded, preserving other classes.
 			window.onload = function() {
-				document.body.className = '';
+				if (document.body.classList) {
+					document.body.classList.remove('loading');
+				} else {
+					// Fallback for very old browsers
+					document.body.className = document.body.className.replace(/\bloading\b/, '').trim();
+				}
 			}
 
 		// Prevent scrolling on touch.

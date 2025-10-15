@@ -22,6 +22,34 @@
 		overflow: hidden;
 	}
 
+	/* Disable only intro animations on non-home pages; keep background animation */
+	body.no-anim #wrapper,
+	body.no-anim #overlay,
+	body.no-anim #header {
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		opacity: 1 !important;
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-o-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+	}
+
+	/* Stop the icon button pop-in animation */
+	body.no-anim #header nav.icon-links li {
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		opacity: 1 !important;
+		top: 0 !important;
+	}
+
 		body.loading * {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
