@@ -511,7 +511,7 @@
 .project-figure figcaption { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-top: 0.35rem; }
 
 .project-img {
-    width: var(--project-img-width, 320px); /* default, override per-figure via inline CSS variable */
+    width: var(--project-img-width, 100px); /* default, override per-figure via inline CSS variable */
     max-width: 100%;
     height: auto;
     display: block;
